@@ -1,0 +1,281 @@
+/*----------------------------------Base Styles--------------------------------------*/
+
+* {
+    box-sizing: border-box; 
+    margin: 0; /*This will remove default margin and padding*/
+    padding: 0;
+}
+
+body {background-color: rgb(117, 46, 46);}
+
+.body-container {
+        margin: 0 auto;  
+        max-width: 600px;
+    }
+
+/*----------------------------------Typography---------------------------------------*/
+* {
+    font-family: 'Merriweather', serif;
+}
+
+/*-----------------------------------Header------------------------------------------*/
+
+h1 {    
+    
+    text-align: center;
+    font-size: 18px;
+    padding: 23px;
+    color: white;
+    background-color: rgb(40, 57, 76);
+}
+
+.signup {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+
+}
+
+.header-summary {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(213, 199, 129, 0.755);
+    padding: 0 13px;
+    margin-bottom: 40px;
+    font-weight: 300;
+
+}
+
+.line1 {
+    border: 2px solid rgb(49, 62, 77);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+
+} 
+
+.line2 {
+    border: 1px solid rgb(49, 62, 77);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 27px;
+} 
+/*-----------------------------------Transitions-------------------------------------*/
+:focus {outline: none;}    
+
+.input1, select {transition: .7s;}
+.input1:focus, select:focus {
+    width: 88%;
+    background-color: rgb(48, 196, 196);
+}
+
+textarea {transition: .7s;}
+textarea:focus {
+    background-color: rgb(111, 104, 147);    
+}
+
+.checkbox {transition: .3s;}
+.checkbox:focus {
+    width: 30px;
+}
+
+.radio {transition: .3s;}
+.radio:focus {
+    width: 30px;
+}
+
+button {transition: .7s;}
+button:focus {
+    width: 80%;
+    height: 62px;
+    background-color: rgb(2, 190, 143);    
+}
+
+button:hover {background-color: rgb(78, 74, 74);}
+
+/* !!!!!!!!Radio buttons are toggles via arrow keys rather than tab key */
+
+
+/*-------------------------------------Main/Form------------------------------------------*/
+fieldset {border: none;}
+
+legend {
+    margin: 0 10px 20px;
+    font-weight: bolder;
+    font-size: 18px;         
+}
+
+label {
+    font-size: 14px;
+    color: rgb(138, 138, 138);
+}
+
+.input1 {
+    font-size: 15px;
+    background-color: rgb(235, 233, 233);
+    /* width: 94%; */
+    padding: 15px;
+    border: none;
+    border-radius: 5px;    
+}
+
+/* The placeholder styles did not work with classes for some reason */
+#fullname::placeholder, #email::placeholder {
+    text-align: right;
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(139, 139, 139);
+}
+
+::placeholder {
+    text-align: left;
+    color: rgb(189, 188, 188);
+}
+
+select {
+    text-align: left;
+    font-size: 15px;
+    background-color: rgb(235, 233, 233);
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    color: gray;
+}
+
+/* ---------------Flexbox---------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+  
+.contact-flex {width: 100%;}    
+
+.contact-flex input, select {
+    width: 93.5%;
+    margin: 10px;  
+}
+
+.contact-flex label {margin-left: 10px;}
+
+.box7 {width: 50%;}
+
+/* ------------------------------------- */
+
+.line3 {
+    border: 1px solid rgb(49, 62, 77);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;    
+    margin-bottom: 30px;
+}
+
+.formsummary {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(139, 139, 139);
+    padding: 0 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.checkbox {
+    margin-left: 17px;
+    margin-bottom: 10px;
+}
+
+#javascript-news {margin-bottom: 30px;}
+
+.radio {
+    margin-left: 17px;
+    margin-bottom: 10px;
+}
+
+#plaintext {margin-bottom: 30px;}
+
+.other {
+    font-weight: 200;
+    margin-left: 16px;
+}
+
+textarea {
+    display: block;
+    width: 90%;
+    margin: 15px auto 30px;    
+    background-color: rgb(235, 233, 233); 
+    border: none;
+    border-radius: 5px; 
+}
+
+button {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgb(5, 130, 134); 
+    border: none;
+    border-radius: 5px; 
+}
+
+/*------------------------------------Footer-----------------------------------------*/
+
+.copyright {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(165, 165, 165);
+    margin-top: 30px;
+    padding-bottom: 200px;
+}
+
+/*-----------------------------------Media Queries-----------------------------------*/
+
+@media (min-width: 768px) {
+
+    .line1, .line2, .line3 {width: 97%;}
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;              
+    }
+      
+    .contact-flex {width: 100%;}    
+    
+    .contact-flex input, select {
+        width: 70%;
+        margin: 10px;  
+    }
+    
+    .contact-flex label {margin-left: 10px;}
+            
+    #zipcode {width: 17.5%;} /*To make input width 25%*/
+
+    .box1 input {margin-left: 14%;}
+    .box2 input {margin-left: 9.32%;}
+    .box3 input {margin-left: 8.6%;}
+    .box4 input {margin-left: 9.3%;}
+    .box5 input {margin-left: 21.4%;}
+    .box6 select {margin-left: 20.1%;}
+    .box7 input {margin-left: 16%;}
+
+    textarea {width: 95%;}
+    button {width: 95%;}
+
+    .input1:focus, select:focus {
+        width: 65%;        
+        background-color: rgb(48, 196, 196);
+    }
+    button:focus {
+        width: 90%;
+        height: 62px;          
+    }
+} 
