@@ -257,7 +257,7 @@ button {
     
     .contact-flex label {margin-left: 10px;}
             
-    #zipcode {width: 17.5%;} /*To make input width 25%*/
+    #zipcode {width: 25%;} 
 
     .box1 input {margin-left: 14%;}
     .box2 input {margin-left: 9.32%;}
